@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Hide My PII",
+  "version": "1.0.0",
+  "description": "Catches API keys, passwords and personal data in your ChatGPT and Gemini prompts before you hit send.",
+  "icons": { "16": "icons/icon16.png", "48": "icons/icon48.png", "128": "icons/icon128.png" },
+  "action": {
+    "default_title": "Hide My PII",
+    "default_popup": "popup.html",
+    "default_icon": { "16": "icons/icon16.png", "48": "icons/icon48.png" }
+  },
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*", "https://chat.openai.com/*", "https://gemini.google.com/*", "https://claude.ai/*"],
+      "js": ["detectors.js", "content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

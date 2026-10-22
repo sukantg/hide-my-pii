@@ -1,0 +1,4 @@
+/* Page-level highlight styles (CSS Custom Highlight API: no DOM changes to the prompt box) */
+::highlight(hmp-high) { background-color: rgba(229, 72, 77, 0.22); text-decoration: underline wavy #e5484d; text-decoration-thickness: 1px; }
+::highlight(hmp-med)  { background-color: rgba(255, 138, 31, 0.22); text-decoration: underline wavy #ff8a1f; text-decoration-thickness: 1px; }
+::highlight(hmp-low)  { background-color: rgba(232, 161, 0, 0.24); text-decoration: underline wavy #e8a100; text-decoration-thickness: 1px; }

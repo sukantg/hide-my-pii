@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hide My PII</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="head">
+    <div class="logo" id="logo"></div>
+    <div class="title">
+      <h1>Hide My PII</h1>
+      <p id="status">Protection is on</p>
+    </div>
+    <label class="sw" title="Turn protection on or off">
+      <input type="checkbox" id="enabled" aria-label="Protection"><i></i>
+    </label>
+  </header>
+
+  <main id="main">
+    <section class="stats" aria-label="Activity">
+      <div class="stat"><b id="s-scanned">0</b><span>Prompts checked</span></div>
+      <div class="stat"><b id="s-blocked">0</b><span>Caught</span></div>
+      <div class="stat"><b id="s-cleaned">0</b><span>Cleaned</span></div>
+    </section>
+
+    <section class="rules">
+      <h2>What to catch</h2>
+      <div id="rules"></div>
+    </section>
+  </main>
+
+  <footer class="foot">Works on ChatGPT, Gemini and Claude. Everything runs on your device. Your prompts are never stored or sent anywhere.</footer>
+
+  <script src="detectors.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
